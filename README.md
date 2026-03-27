@@ -1,4 +1,4 @@
-# Mikayla Subgraph Script
+# CGA Subgraph Analysis
 
 Analysis and visualization of NbCrVWZr high-entropy alloy composition space using UMAP and graph-based methods.
 
