@@ -1,0 +1,14 @@
+name: cga-analysis
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - networkx
+  - matplotlib
+  - seaborn
+  - pillow
+  - openpyxl
+  - jupyter
+  - jupyterlab
