@@ -1,7 +1,21 @@
-numpy>=1.20.0
-pandas>=1.3.0
-networkx>=2.6.0
-matplotlib>=3.4.0
-seaborn>=0.11.0
-Pillow>=8.0.0
-openpyxl>=3.6.0
+# Python compatibility target: 3.8, 3.9, 3.10
+
+# Core analysis stack
+numpy>=1.21,<2.0
+pandas>=1.4,<2.1
+networkx>=2.8,<3.2
+matplotlib>=3.5,<3.8
+seaborn>=0.12,<0.14
+Pillow>=9.2,<11
+
+# Excel I/O (used by pandas for .xlsx files)
+openpyxl>=3.0,<3.2
+
+# Notebook environment
+jupyterlab>=3.6,<4.0
+notebook>=6.5,<7.0
+ipykernel>=6.16,<7.0
+
+# Backports for older interpreters
+backports-zoneinfo>=0.2.1; python_version < "3.9"
+tomli>=2.0.1; python_version < "3.11"
