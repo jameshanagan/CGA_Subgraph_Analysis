@@ -23,17 +23,10 @@ This project analyzes a dataset of NbCrVWZr (Niobium-Chromium-Vanadium-Tungsten-
 
 ## Dependencies
 
-Install dependencies using:
+Create the conda environment from the included `environment.yml`:
 ```bash
-pip install -r requirements.txt
-```
-
-### Using conda
-You can also create a conda environment with the following command:
-```bash
-conda create --name cga_env python=3.8
-conda activate cga_env
-conda install --file requirements.txt
+conda env create -f environment.yml
+conda activate cga-analysis
 ```
 
 Key libraries:
@@ -46,7 +39,7 @@ Key libraries:
 - `Pillow` - Image processing
 
 ## Usage
-1. Install dependencies: `pip install -r requirements.txt`
+1. Create and activate the environment: `conda env create -f environment.yml` then `conda activate cga-analysis`
 2. Open the notebook: `jupyter notebook "NbCrVWZr Graph Database Analysis.ipynb"`
 3. Run cells sequentially to generate visualizations and analysis
 
