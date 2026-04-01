@@ -1,9 +1,8 @@
-# Mikayla Subgraph Script
+# CGA Subgraph Analysis
 
 Analysis and visualization of NbCrVWZr high-entropy alloy composition space using UMAP and graph-based methods.
 
 ## Overview
-
 This project analyzes a dataset of NbCrVWZr (Niobium-Chromium-Vanadium-Tungsten-Zirconium) alloy compositions and their materials properties. The analysis includes:
 
 - **UMAP Visualization**: 2D embeddings of alloy compositions colored by elemental composition and material properties
@@ -17,7 +16,6 @@ This project analyzes a dataset of NbCrVWZr (Niobium-Chromium-Vanadium-Tungsten-
   - Kou criteria
 
 ## Files
-
 - `NbCrVWZr Graph Database Analysis.ipynb` - Main Jupyter notebook with all analysis
 - `NbCrVWZr_dataset_1.xlsx` - Materials dataset with compositions and properties
 - `nimplex_GF_5_20_nodes.npy` - NumPy array of node characteristics
@@ -26,9 +24,16 @@ This project analyzes a dataset of NbCrVWZr (Niobium-Chromium-Vanadium-Tungsten-
 ## Dependencies
 
 Install dependencies using:
-
 ```bash
 pip install -r requirements.txt
+```
+
+### Using conda
+You can also create a conda environment with the following command:
+```bash
+conda create --name cga_env python=3.8
+conda activate cga_env
+conda install --file requirements.txt
 ```
 
 Key libraries:
@@ -41,7 +46,6 @@ Key libraries:
 - `Pillow` - Image processing
 
 ## Usage
-
 1. Install dependencies: `pip install -r requirements.txt`
 2. Open the notebook: `jupyter notebook "NbCrVWZr Graph Database Analysis.ipynb"`
 3. Run cells sequentially to generate visualizations and analysis
@@ -60,7 +64,6 @@ KDE plots and radar plots show property distributions across connected component
 - **Scheil Analysis**: Non-equilibrium solidification analysis
 
 ## Output
-
 The notebook generates:
 - PNG visualizations of UMAP embeddings
 - Excel files with component statistics
@@ -68,5 +71,4 @@ The notebook generates:
 - Combined radar plot visualization
 
 ## Citation
-
 If using this analysis in research, please cite the original dataset and describe the filter criteria applied.
