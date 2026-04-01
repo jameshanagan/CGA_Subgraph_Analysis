@@ -29,6 +29,13 @@ jobs:
           test -f "NbCrVWZr_dataset_1.xlsx" && echo "✓ Excel file found"
           test -f "nimplex_GF_5_20_nodes.npy" && echo "✓ Nodes file found"
           test -f "nimplex_GF_5_20_neighbors.npy" && echo "✓ Neighbors file found"
+      - name: Execute notebook end-to-end
+        run: |
+          jupyter nbconvert \
+            --to notebook \
+            --execute "NbCrVWZr Graph Database Analysis.ipynb" \
+            --output "executed-pip-${{ matrix.python-version }}.ipynb" \
+            --ExecutePreprocessor.timeout=1800
 
   test-conda-environment:
     runs-on: ubuntu-latest
@@ -41,3 +48,11 @@ jobs:
       - name: Verify conda imports
         shell: bash -l {0}
         run: python -c "import numpy, pandas, networkx, matplotlib.pyplot, seaborn, PIL, openpyxl, jupyter; print('All conda imports successful')"
+      - name: Execute notebook end-to-end (conda)
+        shell: bash -l {0}
+        run: |
+          jupyter nbconvert \
+            --to notebook \
+            --execute "NbCrVWZr Graph Database Analysis.ipynb" \
+            --output "executed-conda.ipynb" \
+            --ExecutePreprocessor.timeout=1800
